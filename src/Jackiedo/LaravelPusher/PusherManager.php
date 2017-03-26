@@ -3,31 +3,28 @@
 /*
  * This file is part of Laravel Pusher.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Jackie Do <anhvudo@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
-namespace Vinkla\Pusher;
+namespace Jackiedo\LaravelPusher;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use Pusher;
 
 /**
  * This is the Pusher manager class.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author Jackie Do <anhvudo@gmail.com>
  */
 class PusherManager extends AbstractManager
 {
     /**
      * The factory instance.
      *
-     * @var \Vinkla\Pusher\PusherFactory
+     * @var \Jackiedo\LaravelPusher\PusherFactory
      */
     private $factory;
 
@@ -35,7 +32,7 @@ class PusherManager extends AbstractManager
      * Create a new Pusher manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\Pusher\PusherFactory $factory
+     * @param \Jackiedo\LaravelPusher\PusherFactory $factory
      *
      * @return void
      */
@@ -53,7 +50,7 @@ class PusherManager extends AbstractManager
      *
      * @return \Pusher
      */
-    protected function createConnection(array $config): Pusher
+    protected function createConnection(array $config)
     {
         return $this->factory->make($config);
     }
@@ -63,7 +60,7 @@ class PusherManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName(): string
+    protected function getConfigName()
     {
         return 'pusher';
     }
@@ -71,9 +68,9 @@ class PusherManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Vinkla\Pusher\PusherFactory
+     * @return \Jackiedo\LaravelPusher\PusherFactory
      */
-    public function getFactory(): PusherFactory
+    public function getFactory()
     {
         return $this->factory;
     }

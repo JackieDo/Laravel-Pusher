@@ -3,13 +3,11 @@
 /*
  * This file is part of Laravel Pusher.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Jackie Do <anhvudo@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
-declare(strict_types=1);
 
 return [
 
@@ -41,22 +39,22 @@ return [
 
         'main' => [
             'auth_key' => 'your-auth-key',
-            'secret' => 'your-secret',
-            'app_id' => 'your-app-id',
-            'options' => [],
-            'host' => null,
-            'port' => null,
-            'timeout' => null,
+            'secret'   => 'your-secret',
+            'app_id'   => 'your-app-id',
+            'options'  => [],
+            'host'     => null,
+            'port'     => null,
+            'timeout'  => null,
         ],
 
         'alternative' => [
             'auth_key' => 'your-auth-key',
-            'secret' => 'your-secret',
-            'app_id' => 'your-app-id',
-            'options' => [],
-            'host' => null,
-            'port' => null,
-            'timeout' => null,
+            'secret'   => 'your-secret',
+            'app_id'   => 'your-app-id',
+            'options'  => [],
+            'host'     => null,
+            'port'     => null,
+            'timeout'  => null,
         ],
 
     ],

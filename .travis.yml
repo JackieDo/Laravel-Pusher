@@ -1,16 +1,12 @@
 language: php
 
 php:
-  - 7.0
-  - 7.1
+  - 5.5
+  - 5.6
+  - hhvm
 
-sudo: false
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install --prefer-source --no-interaction --dev
 
-install:
-  - travis_retry composer install --no-interaction
-
-script:
-  - vendor/bin/phpunit --coverage-clover clover.xml
-
-after_script:
-  - bash <(curl -s https://codecov.io/bash)
+script: phpunit

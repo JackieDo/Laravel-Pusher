@@ -3,15 +3,13 @@
 /*
  * This file is part of Laravel Pusher.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Jackie Do <anhvudo@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
-namespace Vinkla\Pusher;
+namespace Jackiedo\LaravelPusher;
 
 use InvalidArgumentException;
 use Pusher;
@@ -19,7 +17,7 @@ use Pusher;
 /**
  * This is the Pusher factory class.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author Jackie Do <anhvudo@gmail.com>
  */
 class PusherFactory
 {
@@ -30,7 +28,7 @@ class PusherFactory
      *
      * @return \Pusher
      */
-    public function make(array $config): Pusher
+    public function make(array $config)
     {
         $config = $this->getConfig($config);
 
@@ -46,7 +44,7 @@ class PusherFactory
      *
      * @return array
      */
-    protected function getConfig(array $config): array
+    protected function getConfig(array $config)
     {
         $keys = [
             'auth_key',
@@ -74,7 +72,7 @@ class PusherFactory
      *
      * @return \Pusher
      */
-    protected function getClient(array $auth): Pusher
+    protected function getClient(array $auth)
     {
         return new Pusher(
             $auth['auth_key'],

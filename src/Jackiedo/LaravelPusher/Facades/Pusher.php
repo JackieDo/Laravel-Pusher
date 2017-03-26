@@ -3,22 +3,20 @@
 /*
  * This file is part of Laravel Pusher.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Jackie Do <anhvudo@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
-namespace Vinkla\Pusher\Facades;
+namespace Jackiedo\LaravelPusher\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * This is the Pusher facade class.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author Jackie Do <anhvudo@gmail.com>
  */
 class Pusher extends Facade
 {
@@ -27,7 +25,7 @@ class Pusher extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor(): string
+    protected static function getFacadeAccessor()
     {
         return 'pusher';
     }

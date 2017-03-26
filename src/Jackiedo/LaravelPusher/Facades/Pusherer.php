@@ -1,15 +1,4 @@
-<?php
-
-/*
- * This file is part of Laravel Pusher.
- *
- * (c) Jackie Do <anhvudo@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace Jackiedo\LaravelPusher\Facades;
+<?php namespace Jackiedo\LaravelPusher\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -18,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
  *
  * @author Jackie Do <anhvudo@gmail.com>
  */
-class Pusher extends Facade
+class Pusherer extends Facade
 {
     /**
      * Get the registered name of the component.

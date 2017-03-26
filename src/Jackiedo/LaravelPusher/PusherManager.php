@@ -1,15 +1,4 @@
-<?php
-
-/*
- * This file is part of Laravel Pusher.
- *
- * (c) Jackie Do <anhvudo@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace Jackiedo\LaravelPusher;
+<?php namespace Jackiedo\LaravelPusher;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;

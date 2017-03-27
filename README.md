@@ -5,7 +5,9 @@
 
 # Description
 
-Laravel Pusher is a [Pusher](https://github.com/pusher/pusher-http-php) bridge for Laravel from version 5.1 to 5.4
+Laravel Pusher is a [Pusher](https://pusher.com/) bridge for Laravel from version 5.1 to 5.4 using [the Official Pusher package](https://github.com/pusher/pusher-http-php).
+
+This package is forked from [vinkla/laravel-pusher](https://github.com/vinkla/laravel-pusher) package for supporting Laravel 5.4 using php version earlier 7.x
 
 # Overview
 Look at one of the following topics to learn more about Laravel Pusher.
@@ -82,9 +84,6 @@ This class contains no public methods of interest. This class should be added to
 Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
 ```php
-// You can alias this in config/app.php.
-use Jackiedo\LaravelPusher\Facades\Pusherer;
-
 Pusherer::trigger('my-channel', 'my-event', ['message' => $message]);
 // We're done here - how easy was that, it just works!
 
@@ -95,8 +94,6 @@ Pusherer::getSettings();
 The Pusher manager will behave like it is a `Pusher`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
-use Jackiedo\LaravelPusher\Facades\Pusherer;
-
 // Writing this…
 Pusherer::connection('main')->log('They see me logging…');
 
@@ -138,4 +135,4 @@ App::make('Foo')->bar();
 
 ## Official Documentation
 
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the Official Pusher package](https://github.com/pusher/pusher-php-server).
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the Official Pusher package](https://github.com/pusher/pusher-http-php).

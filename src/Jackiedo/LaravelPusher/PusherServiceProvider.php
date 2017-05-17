@@ -32,15 +32,13 @@ class PusherServiceProvider extends ServiceProvider
          * Publishing package's config
          */
         $packageConfigPath = __DIR__ . '/../../config/config.php';
-        $config            = config_path('pusher.php');
+        $appConfigPath     = config_path('pusher.php');
 
         $this->publishes([
-            $packageConfigPath => $config,
+            $packageConfigPath => $appConfigPath,
         ], 'config');
 
-        if (file_exists($config)) {
-            $this->mergeConfigFrom($packageConfigPath, 'pusher');
-        }
+        $this->mergeConfigFrom($packageConfigPath, 'pusher');
     }
 
     /**
